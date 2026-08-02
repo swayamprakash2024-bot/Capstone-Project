@@ -4,7 +4,7 @@ from fastapi import APIRouter,HTTPException
 from pydantic import BaseModel
 class ChatRequest(BaseModel):
     question: str
-gemini_model=genai.Client(api_key=os.environ.get('GEMINI_API_KEY'))
+gemini_model=genai.Client(api_key=os.environ.get('GEMINI'))
 # goodmorning how can I help you?
 router = APIRouter()
 def simple_bot(question):
